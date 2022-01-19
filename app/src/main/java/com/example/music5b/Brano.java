@@ -15,13 +15,12 @@ public class Brano {
     private String autore;
     private LocalDate datapubblic;
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    public Brano(String t, String a, String g, String d)
+    public Brano()
     {
-        titolo=t;
-        autore=a;
-        genere=g;
-        datapubblic = LocalDate.parse(d, DateTimeFormatter.ofPattern("d/MM/yyyy"));
+       // titolo=t;
+       // autore=a;
+        //genere=g;
+        //datapubblic = LocalDate.parse(d, DateTimeFormatter.ofPattern("d/MM/yyyy"));
     }
     public String getTitolo(){
         return titolo;
