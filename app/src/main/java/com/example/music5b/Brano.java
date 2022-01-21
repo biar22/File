@@ -13,15 +13,36 @@ public class Brano {
     private String titolo;
     private String genere;
     private String autore;
-    private LocalDate datapubblic;
+    private String durata;
 
     public Brano()
     {
-       // titolo=t;
-       // autore=a;
-        //genere=g;
-        //datapubblic = LocalDate.parse(d, DateTimeFormatter.ofPattern("d/MM/yyyy"));
+       this.titolo = titolo;
+       this.autore = autore;
+       this.durata = durata;
+       this.genere = genere;
     }
+
+    public void setTitolo(String titolo) {
+        this.titolo = titolo;
+    }
+
+    public void setGenere(String genere) {
+        this.genere = genere;
+    }
+
+    public void setAutore(String autore) {
+        this.autore = autore;
+    }
+
+    public void setDurata(String durata) {
+        this.durata = durata;
+    }
+
+    public String getDurata() {
+        return durata;
+    }
+
     public String getTitolo(){
         return titolo;
     }
@@ -34,7 +55,7 @@ public class Brano {
         return genere;
     }
 
-    public LocalDate getDatapubblic() {
-        return datapubblic;
-    }
+    @Override
+    public String toString() { return titolo + durata + genere + autore; }
+
 }
