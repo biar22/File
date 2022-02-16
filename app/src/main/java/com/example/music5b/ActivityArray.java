@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class ActivityArray extends AppCompatActivity {
 
-    TextView v;
+    TextView v, lista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,10 +16,12 @@ public class ActivityArray extends AppCompatActivity {
         setContentView(R.layout.activity_array);
 
         Intent i = getIntent();
-        String messagioRicevuto = i.getStringExtra("messaggio");
+        String lista = i.getStringExtra("messaggio");
 
         v = findViewById(R.id.textView);
-        v.setText(messagioRicevuto);
+        v.setText(lista);
     }
-
+    //public void back(View v){
+      //  Intent i = new Intent(getApplicationContext(), MainActivity.class); //istanziare una intent
+        //startActivity(i);    }
 }
